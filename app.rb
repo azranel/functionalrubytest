@@ -1,4 +1,7 @@
+require 'pry'
 require 'functional'
+require 'benchmark/ips'
+require './pattern_matching'
 
 class App
   def call
@@ -6,4 +9,4 @@ class App
   end
 end
 
-App.call
+App.new.call
