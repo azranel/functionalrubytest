@@ -2,6 +2,7 @@ require 'pry'
 require 'functional'
 require 'benchmark/ips'
 require './pattern_matching'
+require './memoization'
 
 class App
   def call
