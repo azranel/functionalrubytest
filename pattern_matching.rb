@@ -1,16 +1,16 @@
 class Fibonacci
   include Functional::PatternMatching
 
-  defn(:calc, _) do |n|
-    calc(n - 1) + calc(n - 2)
-  end.when { |n| n != 0 && n != 1 }
-
   defn(:calc, 0) do
     0
   end
 
   defn(:calc, 1) do
     1
+  end
+
+  defn(:calc, _) do |n|
+    calc(n - 1) + calc(n - 2)
   end
 
   def oo_calc(n)
