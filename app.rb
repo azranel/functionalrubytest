@@ -3,6 +3,7 @@ require 'functional'
 require 'benchmark/ips'
 require './pattern_matching'
 require './memoization'
+require './protocols'
 
 class App
   def call
