@@ -4,6 +4,7 @@ require 'benchmark/ips'
 require './pattern_matching'
 require './memoization'
 require './protocols'
+require './records'
 
 class App
   def call
