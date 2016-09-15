@@ -21,6 +21,19 @@ class MemoizationFibb
     end
   end
 
+  def self.calc_fib_best_way(n)
+    a = 0
+    b = 1
+
+    n.times do
+    	temp = a
+    	a = b
+    	b = temp + b
+    end
+
+    return a
+  end
+
   memoize(:calc_fib)
 end
 
@@ -29,6 +42,7 @@ FIB_NUMBER = 200
 Benchmark.ips do |b|
   b.report("with memo Fibonacci") { MemoizationFibb.calc_fib(FIB_NUMBER) }
   b.report("without memo Fibonacci") { MemoizationFibb.calc_fib_without_memo(FIB_NUMBER) }
+  b.report("without memo best Fibonacci") { MemoizationFibb.calc_fib_best_way(FIB_NUMBER) }
   b.compare!
 end
 
