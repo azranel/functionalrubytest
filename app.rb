@@ -20,12 +20,3 @@ require './final_vars'
 #           immutable and of fixed length.
 #
 # And some more...
-
-
-class App
-  def call
-
-  end
-end
-
-App.new.call
